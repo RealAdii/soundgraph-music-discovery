@@ -4,7 +4,7 @@ import './App.css'
 
 const APP_ID = '0xAc8348B8C077dCcF916e8952622a1162aF6d9100'
 const APP_SECRET = '0xe9cd799b42e9497d86444b945af8a7bf8c581a51c85769c9d91da19b91ee55e4'
-const PROVIDER_ID = '97d77158-b910-4558-84d7-de0e7374effa'
+const PROVIDER_ID = 'c94476a0-8a75-4563-b70a-bf6124d7c59b'
 
 function App() {
   const [loading, setLoading] = useState(false)
@@ -27,7 +27,7 @@ function App() {
         PROVIDER_ID,
         {
           useAppClip: false,
-          customSharePageUrl: 'https://portal.reclaimprotocol.org'
+          customSharePageUrl: 'https://portal.reclaimprotocol.org/popcorn'
         }
       )
       console.log('Reclaim request initialized:', reclaimRequest)
@@ -158,17 +158,17 @@ function App() {
           </p>
 
           <div className="platforms-grid">
-            <div className="platform-card spotify">
+            <div className="platform-card kaggle">
               <div className="platform-header">
-                <div className="platform-icon spotify">
+                <div className="platform-icon kaggle">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.281.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.075.339z"/>
                   </svg>
                 </div>
                 <span className="platform-status status-active">Active</span>
               </div>
-              <h3 className="platform-name">Spotify</h3>
-              <p className="platform-desc">Import your top tracks, artists, and listening stats from Spotify.</p>
+              <h3 className="platform-name">Kaggle</h3>
+              <p className="platform-desc">Import your Kaggle profile, competitions, and dataset contributions.</p>
               <button className="connect-btn primary" onClick={connectSpotify}>
                 <span className="btn-icon">→</span>
                 Connect
@@ -309,7 +309,7 @@ function App() {
         <div className="iframe-modal">
           <div className="iframe-container">
             <div className="iframe-header">
-              <span>Verify with Spotify</span>
+              <span>Verify with Kaggle</span>
               <button className="iframe-close" onClick={() => setIframeUrl(null)}>×</button>
             </div>
             <iframe
